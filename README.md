@@ -45,16 +45,24 @@ The decision problem "does a container of size k exist inside the (n+1) x (n+1) 
 |------|------|
 | `code/solve_one-sided-polyhex-container.py` | Main solver (glue over the shared SAT framework). |
 | `code/verify_method1.py` | Independent pure-Python geometric verifier. |
-| `code/generate-figures.py` | Figure generator (publication + personal-understanding diagrams). |
+| `code/generate-figures.py` | Figure generator (publication diagrams). |
 | `research/solver-results.json` | Proved values with container cells and timings. |
+| `research/solver-run-log.txt` | Solver stdout/stderr log from the canonical run. |
 | `research/verify_method1-results.json` | Per-n PASS records from the geometric verifier. |
+| `research/verify_method1-run-log.txt` | Verifier stdout/stderr log from the canonical run. |
 | `research/drat-certification-summary.json` | Per-n DRAT/LRAT certification verdict. |
-| `research/drat/n{N}_k{K}.{cnf,drat,lrat,sidecar.json}` | CNF + proof certificate + SHA-256 sidecar per n. |
-| `submission/paper.md` / `paper.pdf` | Paper draft and compiled PDF. |
+| `research/drat/README.md` | Layout notes and the n = 7 proof-file exclusion rationale. |
+| `research/drat/n{N}_k{K}.{cnf,drat,sidecar.json}` | CNF + DRAT proof + SHA-256 sidecar per n (n = 1..6). |
+| `research/drat/n7_k20.{cnf,sidecar.json}` | CNF + sidecar for n = 7 (raw DRAT/LRAT omitted; see `research/drat/README.md`). |
+| `research/drat/nN_witness.json` | Optimal-container witness cells at size a(N). |
+| `research/container-animation.gif` | Animated container illustration (embedded in this README). |
+| `research/container_explainer.py` | Manim source for `container-animation.gif`. |
+| `submission/paper.md` / `paper.pdf` / `paper.typ` | Paper (Markdown source, compiled PDF, Typst source). |
+| `submission/paper-draft.md` | Pre-polish paper draft (kept for transparency). |
 | `submission/oeis-draft.txt` | OEIS submission text. |
 | `submission/oeis-copy-helper.html` | Click-to-copy helper for the OEIS web form. |
-| `submission/one-sided-polyhex-container-figures.pdf` | Publication figures. |
-| `research/one-sided-polyhex-container-understanding.pdf` | Personal understanding diagram. |
+| `submission/one-sided-polyhex-container-figures.pdf` / `.typ` | Publication figures (compiled PDF and Typst source). |
+| `submission/reviews/review-selfcritique.md` | Claude self-critique round used during paper polish. |
 
 ## Reproducing the proof
 
