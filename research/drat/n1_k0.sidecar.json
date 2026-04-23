@@ -1,0 +1,21 @@
+{
+  "framework": "ContainerSolverFramework",
+  "n": 1,
+  "k": 0,
+  "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_k0.cnf",
+  "cnf_sha256": "5f0e7113d5d06ab0ae5f89a8b651a03eca5ade1b0885f9ae46c1efed6cb640d6",
+  "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_k0.drat",
+  "drat_sha256": "768241befb51e0874dccfbfaec11029c5977fbb36d7d68ea04d4719ec5cd78c3",
+  "drat_bytes": 55,
+  "drat_lines": null,
+  "solver_name": "auto",
+  "solve_wall_seconds": 0.07890299998689443,
+  "verifier": "drat-trim",
+  "verified": true,
+  "witness_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 0.01177119999192655,
+  "drat_trim_output_tail": "arsing input formula with 12 variables and 34 clauses\n\nc finished parsing\n\nc UNSAT via unit propagation on the input instance\n\nc 3 of 34 clauses in core                            \n\nc 1 of 11 lemmas in core using 3 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\ns VERIFIED\n\nc verification time: 0.047 seconds\n"
+}

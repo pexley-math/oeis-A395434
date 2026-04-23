@@ -1,0 +1,21 @@
+{
+  "framework": "ContainerSolverFramework",
+  "n": 4,
+  "k": 6,
+  "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_k6.cnf",
+  "cnf_sha256": "87b65c8f8f80873654728952aa7e966f1ad0954fbff85cffa10d593f94bd726e",
+  "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_k6.drat",
+  "drat_sha256": "dd8ede1e6bf88e57c608943970cdbb4bd0e76db5d04fd9fb9b6b0005e78552fd",
+  "drat_bytes": 241944,
+  "drat_lines": null,
+  "solver_name": "auto",
+  "solve_wall_seconds": 0.14057669998146594,
+  "verifier": "drat-trim",
+  "verified": true,
+  "witness_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 0.03856300003826618,
+  "drat_trim_output_tail": "c parsing input formula with 722 variables and 2762 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 2058 of 2762 clauses in core                            \n\nc 1617 of 2734 lemmas in core using 26518 resolution steps\n\nc 910 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\ns VERIFIED\n\nc verification time: 0.079 seconds\n"
+}

@@ -1,0 +1,83 @@
+solver-iterate summary -- one-sided-polyhex-container
+========================================================
+Date: 2026-04-23
+
+PROVED RANGE
+------------
+  a(1..7) = 1, 2, 4, 7, 11, 15, 21   (all PROVED)
+  a(8)    = TIMEOUT (> 1800 s per-term cap; archived solver took 734 s
+                     on a tight (n,n) window without DRAT margin)
+
+VALUES
+------
+  Match the archived 2026-03-22 solver values for n=1..7 (1, 2, 4, 7,
+  11, 15, 21). Archived a(8) was 26; not reproduced under the 1800 s
+  budget on the wider (n+1, n+1) window used for DRAT margin.
+
+BASELINE (pre-iteration)
+------------------------
+  n=6: 19.3 s -- fresh ContainerSolverFramework with no opt-in flags,
+  upper_bound n*n, grid (n+1, n+1), no bridge cuts, no lonely-cell
+  clauses, no translation breaker.
+
+KEPT ITERATIONS (iteration-log.tsv, all six rounds)
+---------------------------------------------------
+  1 encoding       enable       use_lonely_cell_clauses=True           19.3 -> 17.2 s
+  2 parameters     tune         upper_bound n^2 -> n(n+1)/2 + n         17.2 -> 13.8 s
+  3 architecture   enable       incremental=True (persistent ITot/CEGAR) 13.8 -> 10.4 s
+  4 simplification remove       drop redundant grid_shape_fn override   10.4 -> 10.4 s  (code cleanup, no timing delta)
+  5 architecture   selfcritique bridge_candidates_fn=default_bridge_candidates 10.4 -> 10.1 s
+  6 encoding       selfcritique use_translation_breaker=True            10.1 ->  8.3 s
+
+  All four required categories represented (encoding, parameters,
+  architecture, simplification). Two self-critique candidates tested,
+  both kept.
+
+FRAMEWORK BUG FOUND + FIXED MID-ITERATION
+-----------------------------------------
+  Iteration 1 + iteration 2 combined exposed a latent bug: with
+  use_lonely_cell_clauses=True and the tighter upper_bound the solver
+  drove a(1) to 2 (wrongly PROVED) instead of the correct 1. Root
+  cause: the lonely-cell clause "every selected cell has a selected
+  neighbour" is invalid when the optimal container is a single cell
+  (the n=1 case). Verifier 1 (geometric set-inclusion) flagged the
+  disagreement at n=1 during the incremental output check.
+
+  Fix (commit 0edd24c1, 2026-04-23): sat_utils/frameworks/container.py
+  adds `and ctx.n >= 2` guards to both CNF build sites before calling
+  lonely_cell_clauses. 36/36 framework tests pass. Both verifiers
+  agree on every n after the fix.
+
+SELF-CRITIQUE NOTE
+------------------
+  research/solver-review/claude-selfcritique-20260423.md -- three
+  candidates listed (Phase-3 bridge cuts, wider-window translation
+  breaker, explicit solver_name). Candidates 1 and 2 tested and kept;
+  candidate 3 (explicit solver_name="cadical153") dropped from
+  the queue as predicted <2 % speedup (setup-cost only).
+
+FINAL PROOF RUN
+---------------
+  solver: code/solve_one-sided-polyhex-container.py (post all 6
+          iterations + framework fix)
+  command: python ... --n 1-8 --per-term-timeout 1800
+  per-term elapsed (wall):
+    n=1:      0.001 s      PROVED a(1) = 1
+    n=2:      0.001 s      PROVED a(2) = 2
+    n=3:      0.002 s      PROVED a(3) = 4
+    n=4:      0.01  s      PROVED a(4) = 7
+    n=5:      0.60  s      PROVED a(5) = 11
+    n=6:      8.29  s      PROVED a(6) = 15
+    n=7:   1227.08  s      PROVED a(7) = 21
+    n=8:   1830.07  s      TIMEOUT (HARD TIMEOUT at 1800 s + 30 s grace)
+  total wall: 3070.2 s (~51 minutes)
+
+VERIFIER CROSS-CHECK ON FINAL RANGE
+-----------------------------------
+  verifier 1 (hex geometric set-inclusion, pure-Python):
+    n=1..7 all PASS in < 1 s total.
+  verifier 2 (Glucose 4.2 + spanning arborescence + seqcounter):
+    n=1..6 PASS within seconds; n=7 re-derived in the background
+    (run in progress at write-time; see research/verify_method2-results.json).
+
+NO pre-primed values. solver file has zero KNOWN_VALUES references.

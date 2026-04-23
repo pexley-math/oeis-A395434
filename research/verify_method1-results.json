@@ -1,0 +1,72 @@
+{
+  "verifier": "verify_method1",
+  "method": "geometric set-inclusion on hex axial lattice (pure Python BFS, rotation + translation, disjoint enumeration, one-sided quotient)",
+  "timestamp": "2026-04-23T15:01:25",
+  "per_term_timeout_s": 3600.0,
+  "overall_status": "PASS",
+  "results": [
+    {
+      "n": 1,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=1: 1 cells connected, all 1 one-sided 1-hexes contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 1,
+      "container_size": 1
+    },
+    {
+      "n": 2,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=2: 2 cells connected, all 1 one-sided 2-hexes contained (method1 geometric)",
+      "elapsed": 0.0010001659393310547,
+      "pieces_checked": 1,
+      "container_size": 2
+    },
+    {
+      "n": 3,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=3: 4 cells connected, all 3 one-sided 3-hexes contained (method1 geometric)",
+      "elapsed": 0.0,
+      "pieces_checked": 3,
+      "container_size": 4
+    },
+    {
+      "n": 4,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=4: 7 cells connected, all 10 one-sided 4-hexes contained (method1 geometric)",
+      "elapsed": 0.0015034675598144531,
+      "pieces_checked": 10,
+      "container_size": 7
+    },
+    {
+      "n": 5,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=5: 11 cells connected, all 33 one-sided 5-hexes contained (method1 geometric)",
+      "elapsed": 0.008517026901245117,
+      "pieces_checked": 33,
+      "container_size": 11
+    },
+    {
+      "n": 6,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=6: 15 cells connected, all 147 one-sided 6-hexes contained (method1 geometric)",
+      "elapsed": 0.04649829864501953,
+      "pieces_checked": 147,
+      "container_size": 15
+    },
+    {
+      "n": 7,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=7: 21 cells connected, all 620 one-sided 7-hexes contained (method1 geometric)",
+      "elapsed": 0.22334980964660645,
+      "pieces_checked": 620,
+      "container_size": 21
+    }
+  ]
+}

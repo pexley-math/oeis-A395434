@@ -1,0 +1,55 @@
+{
+  "1": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_k0.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_k0.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n1_k0.sidecar.json",
+    "error": null
+  },
+  "2": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n2_k1.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n2_k1.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n2_k1.sidecar.json",
+    "error": null
+  },
+  "3": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n3_k3.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n3_k3.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n3_k3.sidecar.json",
+    "error": null
+  },
+  "4": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_k6.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_k6.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n4_k6.sidecar.json",
+    "error": null
+  },
+  "5": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n5_k10.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n5_k10.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n5_k10.sidecar.json",
+    "error": null
+  },
+  "6": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n6_k14.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n6_k14.drat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n6_k14.sidecar.json",
+    "error": null
+  },
+  "7": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.drat",
+    "lrat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.lrat",
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.sidecar.json",
+    "verifier": "lrat-check (MSVC)",
+    "verifier_output": "c VERIFIED  (7866582 clauses added, max 699463 live, 79.54s)",
+    "note": "drat-trim on the 1.1GB DRAT stalled at 2%/40min; re-emitted via cadical --lrat=true to produce a 3.37GB LRAT, then verified by lrat-check in 80s",
+    "error": null
+  }
+}

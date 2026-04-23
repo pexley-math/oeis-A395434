@@ -1,0 +1,21 @@
+{
+  "framework": "ContainerSolverFramework",
+  "n": 7,
+  "k": 20,
+  "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.cnf",
+  "cnf_sha256": "ba83eb63f3c05ee50164de22c35c9a41d9e894ae50d31a25a132a5dadb6d04a0",
+  "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_k20.drat",
+  "drat_sha256": "ab07b122892060ebe85001c141849817d11683a1b642ab73834f74b4ee124298",
+  "drat_bytes": 1115092290,
+  "drat_lines": null,
+  "solver_name": "auto",
+  "solve_wall_seconds": 3367.4410302999895,
+  "verifier": "drat-trim",
+  "verified": false,
+  "witness_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-one-sided-polyhex-container\\research\\drat\\n7_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 1529.9275222999277,
+  "drat_trim_output_tail": null
+}
