@@ -1,0 +1,22 @@
+{
+  "framework": "ContainerSolverFramework",
+  "n": 6,
+  "k": 17,
+  "cnf_path": "research\\drat\\n6_k17.cnf",
+  "cnf_sha256": "b4eea9e2bf92f5717181cea4f7e33bf84d6ce37743e0f49337ab4202ba13876d",
+  "drat_path": "research\\drat\\n6_k17.drat",
+  "drat_sha256": "f7e9d6e5ff130585d6436990c7e8d0ef7ded3bf62765ed2b8c96c1ec08145a53",
+  "drat_bytes": 1105000,
+  "drat_lines": null,
+  "solver_name": "glucose42",
+  "solve_wall_seconds": 1.7307653999887407,
+  "verifier": "drat-trim",
+  "verified": true,
+  "witness_path": "research\\drat\\n6_witness.json",
+  "cegar_iterations": 1,
+  "cegar_cuts_added": 0,
+  "emit_exit_code": 20,
+  "emit_runtime_seconds": 0.2711673000594601,
+  "drat_trim_output_tail": " input formula with 3479 variables and 20183 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 18549 of 20183 clauses in core                            \n\nc 13897 of 21502 lemmas in core using 158049 resolution steps\n\nc 11625 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\ns VERIFIED\n\nc verification time: 1.350 seconds\n",
+  "verifier_verdict": "REFUTATION"
+}

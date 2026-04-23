@@ -1,0 +1,18 @@
+verify_method1 run log
+============================================================
+Method: square-lattice geometric set-inclusion (pure Python BFS)
+Timestamp: 2026-04-19T11:37:53
+Per-term timeout: 3600.0 s
+Overall: PASS
+
+  [PASS] n=1: 1 cells connected, all 1 fixed 1-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=2: 3 cells connected, all 2 fixed 2-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=3: 5 cells connected, all 6 fixed 3-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=4: 9 cells connected, all 19 fixed 4-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=5: 13 cells connected, all 63 fixed 5-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=6: 18 cells connected, all 216 fixed 6-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=7: 24 cells connected, all 760 fixed 7-ominoes contained (method1 geometric)  [0.0s]
+  [PASS] n=8: 31 cells connected, all 2725 fixed 8-ominoes contained (method1 geometric)  [0.1s]
+  [PASS] n=9: 39 cells connected, all 9910 fixed 9-ominoes contained (method1 geometric)  [0.5s]
+
+NO pre-primed values. All values derived from scratch by independent pure-Python enumeration.
