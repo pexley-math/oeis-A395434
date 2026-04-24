@@ -21,23 +21,6 @@ a(n) is the minimum number of hexagonal cells in an edge-connected polyhex C suc
 
 Each value is proved by matching SAT/UNSAT certificates (SAT at k = a(n), UNSAT at k = a(n) - 1) inside an (n+1) x (n+1) axial rectangle, with a machine-verified UNSAT proof at the lower bound: drat-trim verdict `s DERIVATION` for n = 1..6, and cadical `--lrat=true` + lrat-check verdict `c VERIFIED` for n = 7 (the 1.1 GB binary DRAT exceeded drat-trim's practical memory budget; the LRAT path is faster and produces a linear-checkable certificate). Every value is additionally cross-checked by an independent pure-Python geometric containment verifier with a disjoint code path from the solver.
 
-## Method
-
-SAT solver (CaDiCaL via PySAT) with counterexample-guided abstraction refinement (CEGAR) for connectivity and top-down incremental descent via an ITotalizer wrapper.
-
-- **SAT encoding:** cell variables x(q, r) on axial coordinates with an at-most-k cardinality constraint (totalizer), placement variables y(i, rho, t) for each one-sided n-hex P_i, each rotation rho by a multiple of 60 degrees, and each translation t that fits the rotated piece inside the (n+1) x (n+1) rectangle, plus piece-coverage and piece-cell implication clauses.
-- **Connectivity:** enforced via CEGAR. Each candidate model is BFS-tested under the hex-lattice 6-neighbour adjacency; disconnected models trigger a disjunctive cut (optionally with bridge-cell activation disjuncts) and a re-solve until the returned cell set is a single connected component.
-- **Cardinality descent:** an incremental-SAT driver walks k downward from the piece-count upper bound, adding connectivity cuts on demand, until UNSAT at k = a(n) - 1 establishes optimality.
-- **Lonely-cell preprocessing:** for n >= 2, cells with fewer than `n - 1` neighbours inside the search rectangle can never participate in an optimal placement and are pre-excluded (guarded off at n = 1, where the reasoning is vacuous). Measured -11 percent wall time at n = 6 in the optimisation ablation.
-- **Proof emission:** on UNSAT at the lower bound, cadical emits a DRAT proof (n = 1..6) or an LRAT proof (n = 7) which is machine-verified by drat-trim or lrat-check without reference to the solver's internal state.
-
-## Key Findings
-
-- The sequence is novel: none of the OEIS sequences with prefix `1, 2, 4, 7, 11, 15, 21` match past n = 7 under the hexagonal-container semantics.
-- Growth appears to be Theta(n^2) with `n^2 / 3 <= a(n) <= 5 n^2 / 8` empirically for n = 1..7 (UNVERIFIED as a general bound).
-- **Non-monotonic bounding-box aspect.** The optimal container at n = 4 has a tall box (4 x 3) while n = 5 has a short, wide box (3 x 6) and n = 7 returns to a tall box (8 x 5). The box dimensions are not themselves minimising; the minimum-cell polyhex is.
-- **No closed form found.** Candidate families tested (polynomial degree at most 3, linear recurrences of order at most 4 with small integer coefficients, integer-floor closed forms, sibling-sequence offsets) all fail.
-
 ## Running the Solver
 
 > **Note.** The scripts in `code/` are not runnable as-is from this repository alone. They import from a private shared-library monorepo (`sat_utils`, `polyform_enum`, `figure_gen_utils`) that is not published here, and their `sys.path` insertions assume the monorepo layout. The code is shipped as a reference for the method and for diff-style audit against the proof artefacts in `research/`. The proofs themselves (SAT witnesses plus drat-trim `s DERIVATION` certificates for n = 1..6 and an lrat-check `c VERIFIED` certificate for n = 7) are self-contained in `research/drat/` and can be re-verified with any stock DRAT or LRAT checker without running the solver.
