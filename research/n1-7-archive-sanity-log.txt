@@ -1,0 +1,16 @@
+n=1..7 archive sanity-check log
+============================================================
+Timestamp: 2026-04-25T16:37:37
+Total wall: 0.3s
+Source:    git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json
+Method:    verify_method1.verify_n (pure-Python BFS enumeration of one-sided n-hexes via A006535, set-inclusion containment under rotation + translation)
+
+  n=1: [PASS] n=1: 1 cells connected, all 1 one-sided 1-hexes contained (method1 geometric) [wall 0.0s, checked 1 pieces]
+  n=2: [PASS] n=2: 2 cells connected, all 1 one-sided 2-hexes contained (method1 geometric) [wall 0.0s, checked 1 pieces]
+  n=3: [PASS] n=3: 4 cells connected, all 3 one-sided 3-hexes contained (method1 geometric) [wall 0.0s, checked 3 pieces]
+  n=4: [PASS] n=4: 7 cells connected, all 10 one-sided 4-hexes contained (method1 geometric) [wall 0.0s, checked 10 pieces]
+  n=5: [PASS] n=5: 11 cells connected, all 33 one-sided 5-hexes contained (method1 geometric) [wall 0.0s, checked 33 pieces]
+  n=6: [PASS] n=6: 15 cells connected, all 147 one-sided 6-hexes contained (method1 geometric) [wall 0.0s, checked 147 pieces]
+  n=7: [PASS] n=7: 21 cells connected, all 620 one-sided 7-hexes contained (method1 geometric) [wall 0.2s, checked 620 pieces]
+
+VERDICT: ALL PASS

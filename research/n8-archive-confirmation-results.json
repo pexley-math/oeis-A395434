@@ -1,0 +1,21 @@
+{
+  "purpose": "Geometric confirmation that the 2026-04-23 archived n=8 container of size 26 satisfies the current pipeline's verify_method1 contract.",
+  "source": "git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json",
+  "method": "verify_method1.verify_n (pure-Python BFS enumeration of all 2821 one-sided 8-hexes via A006535, set-inclusion containment under rotation + translation)",
+  "timestamp": "2026-04-25T16:37:37",
+  "per_term_timeout_s": 1800,
+  "wall_seconds": 1.1840741634368896,
+  "n": 8,
+  "claimed_size": 26,
+  "result": {
+    "n": 8,
+    "wall_seconds": 1.1840741634368896,
+    "ok": true,
+    "status": "PASS",
+    "detail": "n=8: 26 cells connected, all 2821 one-sided 8-hexes contained (method1 geometric)",
+    "elapsed": 1.1830694675445557,
+    "pieces_checked": 2821,
+    "container_size": 26
+  },
+  "verdict": "CONFIRMED a(8) <= 26 (geometric containment of all 2821 pieces; upper bound only)"
+}

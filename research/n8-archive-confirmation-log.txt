@@ -1,0 +1,15 @@
+n=8 archive confirmation log
+============================================================
+Timestamp: 2026-04-25T16:37:37
+Wall time: 1.2s
+Source:    git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json
+Method:    verify_method1.verify_n (pure-Python BFS enumeration of all 2821 one-sided 8-hexes via A006535, set-inclusion containment under rotation + translation)
+
+Archive claim: a(8) = 26, container has 26 cells
+verify_method1 status: PASS
+Detail:        n=8: 26 cells connected, all 2821 one-sided 8-hexes contained (method1 geometric)
+Pieces checked: 2821/2821
+
+VERDICT: CONFIRMED a(8) <= 26 (geometric containment of all 2821 pieces; upper bound only)
+
+NOTE: This script confirms ONLY that 26 is geometrically achievable, giving the UPPER bound a(8) <= 26. It does NOT prove a(8) >= 26 (the matching LOWER bound); that would require the UNSAT@25 SAT proof. The upper bound alone is sufficient to disambiguate from sequences predicting a(8) = 28 (A293239 etc.), since 26 < 28.
