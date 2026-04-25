@@ -1,15 +1,17 @@
 """
-confirm_n8_from_archive.py -- one-shot geometric confirmation that the
-archived 2026-04-23 n=8 container of size 26 is a valid one-sided polyhex
+confirm_n8.py -- one-shot geometric confirmation that the recovered
+2026-04-23 n=8 container of size 26 is a valid one-sided polyhex
 container under the current pipeline's verification contract.
 
-Also runs a sanity check on n=1..7 from the same archive: these have
-already been re-proved by the current pipeline, so verify_method1 must
-PASS on them. If the n=1..7 sanity passes, the n=8 verdict is trustworthy.
+Also runs a sanity check on n=1..7 from the same recovered placement:
+these have already been re-proved by the current pipeline, so
+verify_method1 must PASS on them. If the n=1..7 sanity passes, the
+n=8 verdict is trustworthy.
 
 ISOLATED from the pipeline:
-  - Reads ONLY the recovered archive file (./.tmp_archived_results.json,
-    extracted from git commit 400bdee6^).
+  - Reads ONLY the bundled placement at
+    research/2026-04-23-solver-results.json (recovered from upstream
+    git commit 400bdee6^).
   - Writes ONLY to research/n1-7-sanity-{results.json,log.txt}
     and  research/n8-confirmation-{results.json,log.txt}.
   - Does NOT touch solver-results.json, verify_method1-results.json,
@@ -19,8 +21,8 @@ What it does:
   - Reuses verify_method1.verify_n (pure-Python BFS enumeration of all
     one-sided n-hexes via A006535, geometric set-inclusion under
     6 rotations + translation).
-  - Confirms or refutes a(8) <= 26 in minutes (an UPPER bound: the
-    archived 26-cell container is a valid solution iff verify_method1
+  - Confirms or refutes a(8) <= 26 in seconds (an UPPER bound: the
+    recovered 26-cell container is a valid solution iff verify_method1
     passes). Does NOT prove a(8) >= 26 (the matching lower bound
     requires UNSAT@25 SAT, which is the multi-hour task).
 

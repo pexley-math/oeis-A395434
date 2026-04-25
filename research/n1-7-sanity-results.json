@@ -2,9 +2,9 @@
   "purpose": "Sanity check: verify n=1..7 from the archived 2026-04-23 solver-results agree with the current pipeline's verify_method1 contract. If these pass, the n=8 verdict in the companion file is trustworthy.",
   "source": "git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json",
   "method": "verify_method1.verify_n (pure-Python BFS enumeration of one-sided n-hexes via A006535, set-inclusion containment under rotation + translation)",
-  "timestamp": "2026-04-25T16:44:22",
+  "timestamp": "2026-04-25T16:48:05",
   "per_term_timeout_s": 1800,
-  "wall_seconds_total": 0.2847409248352051,
+  "wall_seconds_total": 0.2659912109375,
   "all_pass": true,
   "results": [
     {
@@ -29,17 +29,17 @@
     },
     {
       "n": 3,
-      "wall_seconds": 0.0,
+      "wall_seconds": 0.005061626434326172,
       "ok": true,
       "status": "PASS",
       "detail": "n=3: 4 cells connected, all 3 one-sided 3-hexes contained (method1 geometric)",
-      "elapsed": 0.0,
+      "elapsed": 0.005061626434326172,
       "pieces_checked": 3,
       "container_size": 4
     },
     {
       "n": 4,
-      "wall_seconds": 0.0,
+      "wall_seconds": 0.0020046234130859375,
       "ok": true,
       "status": "PASS",
       "detail": "n=4: 7 cells connected, all 10 one-sided 4-hexes contained (method1 geometric)",
@@ -49,31 +49,31 @@
     },
     {
       "n": 5,
-      "wall_seconds": 0.01575469970703125,
+      "wall_seconds": 0.008012771606445312,
       "ok": true,
       "status": "PASS",
       "detail": "n=5: 11 cells connected, all 33 one-sided 5-hexes contained (method1 geometric)",
-      "elapsed": 0.01575469970703125,
+      "elapsed": 0.008012771606445312,
       "pieces_checked": 33,
       "container_size": 11
     },
     {
       "n": 6,
-      "wall_seconds": 0.04758119583129883,
+      "wall_seconds": 0.04398846626281738,
       "ok": true,
       "status": "PASS",
       "detail": "n=6: 15 cells connected, all 147 one-sided 6-hexes contained (method1 geometric)",
-      "elapsed": 0.04758119583129883,
+      "elapsed": 0.04398846626281738,
       "pieces_checked": 147,
       "container_size": 15
     },
     {
       "n": 7,
-      "wall_seconds": 0.221405029296875,
+      "wall_seconds": 0.2069237232208252,
       "ok": true,
       "status": "PASS",
       "detail": "n=7: 21 cells connected, all 620 one-sided 7-hexes contained (method1 geometric)",
-      "elapsed": 0.221405029296875,
+      "elapsed": 0.2069237232208252,
       "pieces_checked": 620,
       "container_size": 21
     }

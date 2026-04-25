@@ -34,7 +34,7 @@ A299251: A395434(1..7) = b(3..9)  => A395434(8) predicted = b(10) = 28
 
 ## Disambiguation
 
-A395434(8) <= 26 (proved 1.2 s by `code/confirm_n8_from_archive.py`).
+A395434(8) <= 26 (proved 1.2 s by `code/confirm_n8.py`).
 26 < 28. Therefore A395434(n) differs from each of A293239, A261878,
 A261993, A299251 at index 8.
 
@@ -51,6 +51,7 @@ A261993, A299251 at index 8.
   deterministic.
 
 No external trust is required to reproduce the disambiguation: the
-b-files are saved here, the script is in the commit, the verifier is
-in `code/`, and the archive recovers via
-`git show 400bdee6^:research-outputs/paper-project/oeis-a395434/archives/oeis-new-one-sided-polyhex-container/2026-04-23/research/solver-results.json`.
+b-files are saved here, the verifier scripts are in `code/`, and the
+26-cell placement is bundled at
+`research/2026-04-23-solver-results.json` (originally recovered from
+the upstream monorepo at git commit `400bdee6^`).

@@ -1,6 +1,6 @@
 n=1..7 archive sanity-check log
 ============================================================
-Timestamp: 2026-04-25T16:44:22
+Timestamp: 2026-04-25T16:48:05
 Total wall: 0.3s
 Source:    git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json
 Method:    verify_method1.verify_n (pure-Python BFS enumeration of one-sided n-hexes via A006535, set-inclusion containment under rotation + translation)
