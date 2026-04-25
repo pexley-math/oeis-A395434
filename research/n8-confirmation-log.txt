@@ -1,7 +1,7 @@
 n=8 archive confirmation log
 ============================================================
-Timestamp: 2026-04-25T16:37:37
-Wall time: 1.2s
+Timestamp: 2026-04-25T16:44:22
+Wall time: 1.1s
 Source:    git commit 400bdee6^ (archived solver-results.json), recovered to .tmp_archived_results.json
 Method:    verify_method1.verify_n (pure-Python BFS enumeration of all 2821 one-sided 8-hexes via A006535, set-inclusion containment under rotation + translation)
 

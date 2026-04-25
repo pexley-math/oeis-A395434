@@ -10,8 +10,8 @@ PASS on them. If the n=1..7 sanity passes, the n=8 verdict is trustworthy.
 ISOLATED from the pipeline:
   - Reads ONLY the recovered archive file (./.tmp_archived_results.json,
     extracted from git commit 400bdee6^).
-  - Writes ONLY to research/n1-7-archive-sanity-{results.json,log.txt}
-    and  research/n8-archive-confirmation-{results.json,log.txt}.
+  - Writes ONLY to research/n1-7-sanity-{results.json,log.txt}
+    and  research/n8-confirmation-{results.json,log.txt}.
   - Does NOT touch solver-results.json, verify_method1-results.json,
     pipeline-log.json, iteration-log.tsv, or any other pipeline artifact.
 
@@ -45,17 +45,17 @@ from verify_method1 import verify_n  # disjoint geometric verifier
 
 
 _BUNDLED_ARCHIVE = os.path.join(
-    _PROJECT, "research", "archived-2026-04-23-solver-results.json",
+    _PROJECT, "research", "2026-04-23-solver-results.json",
 )
 _LEGACY_ARCHIVE = os.path.join(_REPO_ROOT, ".tmp_archived_results.json")
 ARCHIVE_PATH = (
     _BUNDLED_ARCHIVE if os.path.exists(_BUNDLED_ARCHIVE)
     else _LEGACY_ARCHIVE
 )
-SANITY_JSON = os.path.join(_PROJECT, "research", "n1-7-archive-sanity-results.json")
-SANITY_LOG  = os.path.join(_PROJECT, "research", "n1-7-archive-sanity-log.txt")
-CONFIRM_JSON = os.path.join(_PROJECT, "research", "n8-archive-confirmation-results.json")
-CONFIRM_LOG  = os.path.join(_PROJECT, "research", "n8-archive-confirmation-log.txt")
+SANITY_JSON = os.path.join(_PROJECT, "research", "n1-7-sanity-results.json")
+SANITY_LOG  = os.path.join(_PROJECT, "research", "n1-7-sanity-log.txt")
+CONFIRM_JSON = os.path.join(_PROJECT, "research", "n8-confirmation-results.json")
+CONFIRM_LOG  = os.path.join(_PROJECT, "research", "n8-confirmation-log.txt")
 
 PER_TERM_TIMEOUT_S = 1800  # 30 min hard cap per term
 

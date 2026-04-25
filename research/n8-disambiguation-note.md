@@ -36,8 +36,8 @@ On 2026-04-25 this container was independently re-verified by
 
 Verdict: **PASS** (1.1 seconds wall, all 2,821 pieces contained,
 container connected). See:
-- `research/n8-archive-confirmation-results.json`
-- `research/n8-archive-confirmation-log.txt`
+- `research/n8-confirmation-results.json`
+- `research/n8-confirmation-log.txt`
 
 The verifier's PASS proves that a valid 26-cell container exists.
 By definition `a(n) = min { |C| : C is a connected polyhex containing
@@ -59,7 +59,7 @@ question and is deferred.
 
 To confirm the verifier and the archive format are mutually consistent,
 the same `verify_method1.verify_n` was run on n=1..7 from the same
-archive: all PASS (`research/n1-7-archive-sanity-results.json`). The
+archive: all PASS (`research/n1-7-sanity-results.json`). The
 verifier reproduces the published prefix `1, 2, 4, 7, 11, 15, 21`,
 which rules out a malformed archive or a verifier-vs-archive contract
 mismatch as alternative explanations of the n=8 PASS.
@@ -70,14 +70,6 @@ mismatch as alternative explanations of the n=8 PASS.
 python oeis-a395434/code/confirm_n8_from_archive.py
 ```
 
-Reads the archived placement, runs verify_method1 sanity on n=1..7
-plus confirmation on n=8, writes both result JSONs and logs.
+Reads the recovered 26-cell placement, runs verify_method1 sanity on
+n=1..7 plus confirmation on n=8, writes both result JSONs and logs.
 Deterministic. ~1.5 seconds wall in total.
-
-## Suggested submission text
-
-> a(8) <= 26 from a 26-cell connected one-sided polyhex container that
-> contains all 2,821 one-sided 8-hexes; container verified by
-> independent geometric enumeration. This rules out the candidate
-> matches A293239, A261878, A261993, A299251, all of which predict
-> a(8) = 28.
