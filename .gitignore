@@ -1,0 +1,36 @@
+# Public repo deny-list (mirrors validate-publish.py PUBLIC_DENYLIST).
+# Mechanical guard so accidental `git add` of a non-shipped artifact is
+# refused at staging time rather than only by the publish skill's
+# verification step.
+
+# Submission sources (PDFs are shipped; sources are not)
+submission/*.typ
+submission/*.bib
+submission/paper.pdf
+submission/paper.md
+submission/paper-draft.md
+submission/oeis-draft.txt
+submission/oeis-copy-helper.html
+submission/reviews/
+
+# Internal-only research artefacts
+research/working-notes/
+research/session-digest.md
+research/session-learnings.md
+research/verification-report.md
+research/conjecture-report.md
+research/creative-review.md
+research/design-rationale.md
+research/validation-report.md
+research/review-*.md
+research/solver-review/
+research/solver-summary-log.txt
+research/*-understanding.pdf
+research/*-understanding.typ
+
+# Internal test code
+code/verify_method2.py
+
+# Python build artefacts
+__pycache__/
+*.pyc
