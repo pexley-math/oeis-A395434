@@ -23,13 +23,13 @@ Each value is proved by matching SAT/UNSAT certificates (SAT at k = a(n), UNSAT 
 
 ### n = 8 disambiguation (2026-04-25)
 
-The 7-term prefix `1, 2, 4, 7, 11, 15, 21` coincides with four unrelated OEIS sequences (A293239, A261878, A261993, A299251), each of which takes the value 28 at the index aligned with A395434(8). To rule out a coincidental duplication, this repository carries:
+The 7-term prefix `1, 2, 4, 7, 11, 15, 21` coincides with four unrelated OEIS sequences ([A293239](https://oeis.org/A293239), [A261878](https://oeis.org/A261878), [A261993](https://oeis.org/A261993), [A299251](https://oeis.org/A299251)), each of which takes the value 28 at the index aligned with A395434(8). To rule out a coincidental duplication, this repository carries:
 
-- **A 26-cell connected polyhex container** that contains all 2,821 one-sided 8-hexes. Bundled at `research/2026-04-23-solver-results.json` (the 2026-04-23 solver placement, recovered from the upstream monorepo's git history).
+- **A 26-cell connected polyhex container** that contains all 2,821 one-sided 8-hexes. Bundled at `research/2026-04-23-solver-results.json`.
 - **An independent geometric verifier** (`code/confirm_n8.py` + `code/verify_method1.py`) that re-enumerates all 2,821 one-sided 8-hexes by pure-Python BFS over hex axial coordinates, cross-checks the count against [A006535](https://oeis.org/A006535)(8) = 2,821, and confirms that every piece fits inside the 26-cell container under at least one of the 6 rotations and some translation. Result: PASS in ~1.2 seconds, sanity-checked against n = 1..7 in the same recovered placement (also PASS, reproducing `1, 2, 4, 7, 11, 15, 21`). Outputs at `research/n8-confirmation-results.json` and `research/n1-7-sanity-results.json`.
 - **First-hand b-files** for each matcher (`research/matcher-bfiles/b{293239,261878,261993,299251}.txt`, fetched from oeis.org) and a per-matcher offset audit at `research/matcher-bfiles/AUDIT.md` showing each matcher predicts 28 at the index aligned with A395434(8).
 
-The 26-cell container gives the upper bound `a(8) <= 26`; combined with the matcher predictions of 28, this yields `a(8) <= 26 < 28`, so A395434 differs from each of A293239, A261878, A261993, A299251 at n = 8. Reproduce with `python code/confirm_n8.py` (deterministic, ~1.5 s wall, no SAT solver required).
+The 26-cell container gives the upper bound `a(8) <= 26`; combined with the matcher predictions of 28, this yields `a(8) <= 26 < 28`, so A395434 differs from each of [A293239](https://oeis.org/A293239), [A261878](https://oeis.org/A261878), [A261993](https://oeis.org/A261993), [A299251](https://oeis.org/A299251) at n = 8. Reproduce with `python code/confirm_n8.py` (deterministic, ~1.5 s wall, no SAT solver required).
 
 The matching lower bound (UNSAT at k = 25, which together with the upper bound would prove `a(8) = 26` exactly) is not required for this disambiguation and is deferred.
 
@@ -109,3 +109,7 @@ This work is freely available. If you find it useful, a citation or acknowledgme
 - **A327094** (square grid, free pieces -- methodology template): https://oeis.org/A327094
 - **A392363** (triangular grid, free pieces -- companion): https://oeis.org/A392363
 - **A395422** (triangular grid, fixed pieces -- sibling in the container family): https://oeis.org/A395422
+- **A293239** (coincidental 7-term-prefix matcher; ruled out at n = 8): https://oeis.org/A293239
+- **A261878** (coincidental 7-term-prefix matcher; ruled out at n = 8): https://oeis.org/A261878
+- **A261993** (coincidental 7-term-prefix matcher; ruled out at n = 8): https://oeis.org/A261993
+- **A299251** (coincidental 7-term-prefix matcher; ruled out at n = 8): https://oeis.org/A299251
